@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E5019271DD3B34E00274FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019261DD3B34E00274FDF /* main.m */; };
+		7E50192A1DD3B34E00274FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019291DD3B34E00274FDF /* AppDelegate.m */; };
+		7E5019321DD3B34E00274FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5019311DD3B34E00274FDF /* Assets.xcassets */; };
+		7E50196C1DD3B7BF00274FDF /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019481DD3B7BF00274FDF /* Device.m */; };
+		7E50196D1DD3B7BF00274FDF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50194A1DD3B7BF00274FDF /* Person.m */; };
+		7E50196E1DD3B7BF00274FDF /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50194C1DD3B7BF00274FDF /* Pet.m */; };
+		7E50196F1DD3B7BF00274FDF /* PersonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50194F1DD3B7BF00274FDF /* PersonService.m */; };
+		7E5019761DD3B7BF00274FDF /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019601DD3B7BF00274FDF /* PersonDetailViewController.m */; };
+		7E5019771DD3B7BF00274FDF /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019621DD3B7BF00274FDF /* PersonViewController.m */; };
+		7E5019781DD3B7BF00274FDF /* DeviceDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019651DD3B7BF00274FDF /* DeviceDetailsView.m */; };
+		7E5019791DD3B7BF00274FDF /* PersonDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019671DD3B7BF00274FDF /* PersonDetailsView.m */; };
+		7E50197A1DD3B7BF00274FDF /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5019691DD3B7BF00274FDF /* PersonTableViewCell.m */; };
+		7E50197B1DD3B7BF00274FDF /* PetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50196B1DD3B7BF00274FDF /* PetCollectionViewCell.m */; };
+		7E5019F11DD3C0E500274FDF /* JRAuditableEntityUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5019F01DD3C0E500274FDF /* JRAuditableEntityUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E5019221DD3B34E00274FDF /* JRAuditableEntityExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRAuditableEntityExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5019261DD3B34E00274FDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E5019281DD3B34E00274FDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7E5019291DD3B34E00274FDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7E5019311DD3B34E00274FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E5019361DD3B34E00274FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E5019471DD3B7BF00274FDF /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		7E5019481DD3B7BF00274FDF /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		7E5019491DD3B7BF00274FDF /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		7E50194A1DD3B7BF00274FDF /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		7E50194B1DD3B7BF00274FDF /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		7E50194C1DD3B7BF00274FDF /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
+		7E50194E1DD3B7BF00274FDF /* PersonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonService.h; sourceTree = "<group>"; };
+		7E50194F1DD3B7BF00274FDF /* PersonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonService.m; sourceTree = "<group>"; };
+		7E50195F1DD3B7BF00274FDF /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
+		7E5019601DD3B7BF00274FDF /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
+		7E5019611DD3B7BF00274FDF /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		7E5019621DD3B7BF00274FDF /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		7E5019641DD3B7BF00274FDF /* DeviceDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailsView.h; sourceTree = "<group>"; };
+		7E5019651DD3B7BF00274FDF /* DeviceDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailsView.m; sourceTree = "<group>"; };
+		7E5019661DD3B7BF00274FDF /* PersonDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailsView.h; sourceTree = "<group>"; };
+		7E5019671DD3B7BF00274FDF /* PersonDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsView.m; sourceTree = "<group>"; };
+		7E5019681DD3B7BF00274FDF /* PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewCell.h; sourceTree = "<group>"; };
+		7E5019691DD3B7BF00274FDF /* PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewCell.m; sourceTree = "<group>"; };
+		7E50196A1DD3B7BF00274FDF /* PetCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetCollectionViewCell.h; sourceTree = "<group>"; };
+		7E50196B1DD3B7BF00274FDF /* PetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetCollectionViewCell.m; sourceTree = "<group>"; };
+		7E5019F01DD3C0E500274FDF /* JRAuditableEntityUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRAuditableEntityUI.framework; path = "../../../../Library/Developer/Xcode/DerivedData/JRAuditableEntityUI-fszdonxzweftmyaictrmtlxjxedg/Build/Products/Debug-iphonesimulator/JRAuditableEntityUI.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E50191F1DD3B34E00274FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5019F11DD3C0E500274FDF /* JRAuditableEntityUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E5019191DD3B34E00274FDF = {
+			isa = PBXGroup;
+			children = (
+				7E5019241DD3B34E00274FDF /* JRAuditableEntityExample */,
+				7E5019231DD3B34E00274FDF /* Products */,
+				7E5019E41DD3B9ED00274FDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E5019231DD3B34E00274FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019221DD3B34E00274FDF /* JRAuditableEntityExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E5019241DD3B34E00274FDF /* JRAuditableEntityExample */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019461DD3B7BF00274FDF /* Models */,
+				7E50194D1DD3B7BF00274FDF /* Services */,
+				7E5019501DD3B7BF00274FDF /* ViewControllers */,
+				7E5019631DD3B7BF00274FDF /* Views */,
+				7E5019281DD3B34E00274FDF /* AppDelegate.h */,
+				7E5019291DD3B34E00274FDF /* AppDelegate.m */,
+				7E5019311DD3B34E00274FDF /* Assets.xcassets */,
+				7E5019361DD3B34E00274FDF /* Info.plist */,
+				7E5019251DD3B34E00274FDF /* Supporting Files */,
+			);
+			path = JRAuditableEntityExample;
+			sourceTree = "<group>";
+		};
+		7E5019251DD3B34E00274FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019261DD3B34E00274FDF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E5019461DD3B7BF00274FDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019471DD3B7BF00274FDF /* Device.h */,
+				7E5019481DD3B7BF00274FDF /* Device.m */,
+				7E5019491DD3B7BF00274FDF /* Person.h */,
+				7E50194A1DD3B7BF00274FDF /* Person.m */,
+				7E50194B1DD3B7BF00274FDF /* Pet.h */,
+				7E50194C1DD3B7BF00274FDF /* Pet.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E50194D1DD3B7BF00274FDF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E50194E1DD3B7BF00274FDF /* PersonService.h */,
+				7E50194F1DD3B7BF00274FDF /* PersonService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7E5019501DD3B7BF00274FDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E50195F1DD3B7BF00274FDF /* PersonDetailViewController.h */,
+				7E5019601DD3B7BF00274FDF /* PersonDetailViewController.m */,
+				7E5019611DD3B7BF00274FDF /* PersonViewController.h */,
+				7E5019621DD3B7BF00274FDF /* PersonViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E5019631DD3B7BF00274FDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019641DD3B7BF00274FDF /* DeviceDetailsView.h */,
+				7E5019651DD3B7BF00274FDF /* DeviceDetailsView.m */,
+				7E5019661DD3B7BF00274FDF /* PersonDetailsView.h */,
+				7E5019671DD3B7BF00274FDF /* PersonDetailsView.m */,
+				7E5019681DD3B7BF00274FDF /* PersonTableViewCell.h */,
+				7E5019691DD3B7BF00274FDF /* PersonTableViewCell.m */,
+				7E50196A1DD3B7BF00274FDF /* PetCollectionViewCell.h */,
+				7E50196B1DD3B7BF00274FDF /* PetCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E5019E41DD3B9ED00274FDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E5019F01DD3C0E500274FDF /* JRAuditableEntityUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E5019211DD3B34E00274FDF /* JRAuditableEntityExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E5019391DD3B34E00274FDF /* Build configuration list for PBXNativeTarget "JRAuditableEntityExample" */;
+			buildPhases = (
+				7E50191E1DD3B34E00274FDF /* Sources */,
+				7E50191F1DD3B34E00274FDF /* Frameworks */,
+				7E5019201DD3B34E00274FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JRAuditableEntityExample;
+			productName = JRAuditableEntityExample;
+			productReference = 7E5019221DD3B34E00274FDF /* JRAuditableEntityExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E50191A1DD3B34E00274FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Dealer Information Systems";
+				TargetAttributes = {
+					7E5019211DD3B34E00274FDF = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7E50191D1DD3B34E00274FDF /* Build configuration list for PBXProject "JRAuditableEntityExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E5019191DD3B34E00274FDF;
+			productRefGroup = 7E5019231DD3B34E00274FDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E5019211DD3B34E00274FDF /* JRAuditableEntityExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E5019201DD3B34E00274FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5019321DD3B34E00274FDF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E50191E1DD3B34E00274FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5019761DD3B7BF00274FDF /* PersonDetailViewController.m in Sources */,
+				7E50192A1DD3B34E00274FDF /* AppDelegate.m in Sources */,
+				7E50196E1DD3B7BF00274FDF /* Pet.m in Sources */,
+				7E5019771DD3B7BF00274FDF /* PersonViewController.m in Sources */,
+				7E50196F1DD3B7BF00274FDF /* PersonService.m in Sources */,
+				7E50196D1DD3B7BF00274FDF /* Person.m in Sources */,
+				7E50196C1DD3B7BF00274FDF /* Device.m in Sources */,
+				7E50197B1DD3B7BF00274FDF /* PetCollectionViewCell.m in Sources */,
+				7E5019791DD3B7BF00274FDF /* PersonDetailsView.m in Sources */,
+				7E50197A1DD3B7BF00274FDF /* PersonTableViewCell.m in Sources */,
+				7E5019271DD3B34E00274FDF /* main.m in Sources */,
+				7E5019781DD3B7BF00274FDF /* DeviceDetailsView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7E5019371DD3B34E00274FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7E5019381DD3B34E00274FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E50193A1DD3B34E00274FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JRAuditableEntityExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.discorp.JRAuditableEntityExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E50193B1DD3B34E00274FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JRAuditableEntityExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.discorp.JRAuditableEntityExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E50191D1DD3B34E00274FDF /* Build configuration list for PBXProject "JRAuditableEntityExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E5019371DD3B34E00274FDF /* Debug */,
+				7E5019381DD3B34E00274FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E5019391DD3B34E00274FDF /* Build configuration list for PBXNativeTarget "JRAuditableEntityExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E50193A1DD3B34E00274FDF /* Debug */,
+				7E50193B1DD3B34E00274FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E50191A1DD3B34E00274FDF /* Project object */;
+}
