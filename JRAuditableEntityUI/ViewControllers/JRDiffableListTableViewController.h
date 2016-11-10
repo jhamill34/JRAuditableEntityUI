@@ -10,13 +10,13 @@
 #import <JRAuditableEntity/JRAuditableEntity.h>
 #import "JRDiffableTableViewDelegate.h"
 
-@interface JRDiffableListTableViewController : UIViewController<JRDiffableTableViewDelegate, DiffRunnerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface JRDiffableListTableViewController : UIViewController<JRDiffableTableViewDelegate, JRDiffRunnerDelegate, UITableViewDelegate, UITableViewDataSource>
 
-- (instancetype)initWithListPatch:(ListEntityPatch *)listPatch;
+- (instancetype)initWithListPatch:(JRListEntityPatch *)listPatch;
 
-+ (instancetype)controllerWithPatch:(ListEntityPatch *)listPatch;
++ (instancetype)controllerWithPatch:(JRListEntityPatch *)listPatch;
 
-@property (readonly, nonatomic, strong) ListEntityPatch *listPatch;
+@property (readonly, nonatomic, strong) JRListEntityPatch *listPatch;
 
 @property (nonatomic, weak) id<JRDiffableTableViewDelegate> diffableDelegate;
 

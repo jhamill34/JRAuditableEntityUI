@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <JRAuditableEntity/JRAuditableEntity.h>
 
-@interface JRTextBoxFixableAction : NSObject<FixableAction>
+@interface JRTextBoxFixableAction : NSObject<JRFixableAction>
 
 @end

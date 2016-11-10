@@ -17,12 +17,12 @@
 @end
 
 @implementation JRFixableTableViewController{
-    id<Fixable> _selectedFix;
+    id<JRFixable> _selectedFix;
     NSIndexPath *_selectedIndexPath;
     UILabel *_emptyView;
 }
 
-- (instancetype)initWithEntity:(id<VerifiableEntityProtocol>)entity andFixes:(NSArray<id<Fixable>> *)fixes{
+- (instancetype)initWithEntity:(id<JRVerifiableEntityProtocol>)entity andFixes:(NSArray<id<JRFixable>> *)fixes{
     if(self = [super init]){
         _entity = entity;
         _fixes = fixes;
@@ -31,7 +31,7 @@
     return self;
 }
 
-+ (instancetype)controllerWithEntity:(id<VerifiableEntityProtocol>)entity andFixes:(NSArray<id<Fixable>> *)fixes{
++ (instancetype)controllerWithEntity:(id<JRVerifiableEntityProtocol>)entity andFixes:(NSArray<id<JRFixable>> *)fixes{
     return [[self alloc] initWithEntity:entity andFixes:fixes];
 }
 
@@ -94,16 +94,16 @@
         cell = [[JRFixableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FixableCell"];
     }
     
-    id<Fixable> model = self.fixes[(NSUInteger)indexPath.row];
+    id<JRFixable> model = self.fixes[(NSUInteger)indexPath.row];
 
     cell.fieldLabel.text = [model field];
     
-    if([model isKindOfClass:[FixableListItem class]]){
-        FixableListItem *listModel = (FixableListItem *)model;
+    if([model isKindOfClass:[JRFixableListItem class]]){
+        JRFixableListItem *listModel = (JRFixableListItem *)model;
         cell.currentValueLabel.text = [NSString stringWithFormat:@"%lu invalid", listModel.invalidCount];
         cell.descriptionLabel.text = @"";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }else if([model isKindOfClass:[CompositeFixableEntity class]]){
+    }else if([model isKindOfClass:[JRCompositeFixableEntity class]]){
         id val = [model value];
         cell.currentValueLabel.text = [NSString stringWithFormat:@"invalid %@", [val class]];
         cell.descriptionLabel.text = @"";
@@ -119,10 +119,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    id<Fixable> model = self.fixes[(NSUInteger)indexPath.row];
+    id<JRFixable> model = self.fixes[(NSUInteger)indexPath.row];
     JRFixableTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
-    if([model isKindOfClass:[FixableListItem class]]){
+    if([model isKindOfClass:[JRFixableListItem class]]){
         // Store the attempted fix
         _selectedFix = model;
         _selectedIndexPath = indexPath;
@@ -132,10 +132,10 @@
         collectionViewCtl.fixableDelegate = self;
         collectionViewCtl.title = [NSString stringWithFormat:@"%@ fixes", [model field]];
         [self.navigationController pushViewController:collectionViewCtl animated:YES];
-    }else if([model isKindOfClass:[CompositeFixableEntity class]]){
+    }else if([model isKindOfClass:[JRCompositeFixableEntity class]]){
         // Push FixablesTableViewController on
-        id<VerifiableEntityProtocol> val = [model value];
-        NSArray<id<Fixable>> *childFixes = [val verify];
+        id<JRVerifiableEntityProtocol> val = [model value];
+        NSArray<id<JRFixable>> *childFixes = [val verify];
         
         // Store the attempted fix
         _selectedFix = model;
@@ -171,8 +171,8 @@
 - (void)appliedFix{
     BOOL shouldRemoveFromList = YES;
     
-    if([_selectedFix isKindOfClass:[FixableListItem class]]){
-        FixableListItem *listFix = (FixableListItem *)_selectedFix;
+    if([_selectedFix isKindOfClass:[JRFixableListItem class]]){
+        JRFixableListItem *listFix = (JRFixableListItem *)_selectedFix;
         JRFixableTableViewCell *cell = [self.tableView cellForRowAtIndexPath:_selectedIndexPath];
         
         NSUInteger count = listFix.invalidCount;

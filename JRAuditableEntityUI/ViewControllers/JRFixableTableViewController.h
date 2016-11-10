@@ -10,19 +10,19 @@
 #import <JRAuditableEntity/JRAuditableEntity.h>
 #import "JRFixableTableViewDelegate.h"
 
-@protocol VerifiableEntityProtocol;
+@protocol JRVerifiableEntityProtocol;
 
 @interface JRFixableTableViewController : UIViewController<JRFixableTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
-- (instancetype)initWithEntity:(id<VerifiableEntityProtocol>)entity andFixes:(NSArray<id<Fixable>> *)fixes;
+- (instancetype)initWithEntity:(id<JRVerifiableEntityProtocol>)entity andFixes:(NSArray<id<JRFixable>> *)fixes;
 
-+ (instancetype)controllerWithEntity:(id<VerifiableEntityProtocol>)entity andFixes:(NSArray<id<Fixable>> *)fixes;
++ (instancetype)controllerWithEntity:(id<JRVerifiableEntityProtocol>)entity andFixes:(NSArray<id<JRFixable>> *)fixes;
 
 #pragma mark - Data
 
-@property (readonly, nonatomic, strong) id<VerifiableEntityProtocol> entity;
+@property (readonly, nonatomic, strong) id<JRVerifiableEntityProtocol> entity;
 
-@property (readonly, nonatomic, strong) NSArray<id<Fixable>> *fixes;
+@property (readonly, nonatomic, strong) NSArray<id<JRFixable>> *fixes;
 
 @property (nonatomic, weak) id<JRFixableTableViewDelegate> fixableDelegate;
 

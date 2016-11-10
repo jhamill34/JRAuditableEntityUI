@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <JRAuditableEntity/JRAuditableEntity.h>
 
-@interface JROptionsFixableAction : NSObject<FixableAction, UITableViewDelegate, UITableViewDataSource>
+@interface JROptionsFixableAction : NSObject<JRFixableAction, UITableViewDelegate, UITableViewDataSource>
 
 @property (readonly, nonatomic, strong) NSArray *options;
 

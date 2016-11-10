@@ -27,7 +27,7 @@ typedef void(^SelectCallback)(id value);
     return [[self alloc] initWithChoices:options];
 }
 
--(void)execute:(UIViewController *)context withFixable:(id<Fixable>)fix andSuccess:(FixableSuccess)success andFailure:(FixableFailure)failure{
+-(void)execute:(UIViewController *)context withFixable:(id<JRFixable>)fix andSuccess:(FixableSuccess)success andFailure:(FixableFailure)failure{
     UIViewController *vc = [UIViewController new];
     vc.title = @"Please select an option";
     

@@ -12,12 +12,12 @@
 
 @interface JRDiffableTableViewController : UIViewController<JRDiffableTableViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
-- (instancetype)initWithPatches:(NSArray<id<Patch>> *)patches andEntity:(id<DiffableEntityProtocol>)entity;
+- (instancetype)initWithPatches:(NSArray<id<JRPatch>> *)patches andEntity:(id<JRDiffableEntityProtocol>)entity;
 
-+ (instancetype)controllerWithPatches:(NSArray<id<Patch>> *)patches andEntity:(id<DiffableEntityProtocol>)entity;
++ (instancetype)controllerWithPatches:(NSArray<id<JRPatch>> *)patches andEntity:(id<JRDiffableEntityProtocol>)entity;
 
-@property (readonly, nonatomic, strong) NSArray<id<Patch>> *patches;
-@property (readonly, nonatomic, strong) id<DiffableEntityProtocol> entity;
+@property (readonly, nonatomic, strong) NSArray<id<JRPatch>> *patches;
+@property (readonly, nonatomic, strong) id<JRDiffableEntityProtocol> entity;
 
 @property (nonatomic, weak) id<JRDiffableTableViewDelegate> diffableDelegate;
 

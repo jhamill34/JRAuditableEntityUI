@@ -20,7 +20,7 @@
     UILabel *_emptyView;
 }
 
-- (instancetype)initWithListPatch:(ListEntityPatch *)listPatch{
+- (instancetype)initWithListPatch:(JRListEntityPatch *)listPatch{
     if(self = [super init]){
         _listPatch = listPatch;
         listPatch.delegate = self;
@@ -29,7 +29,7 @@
     return self;
 }
 
-+ (instancetype)controllerWithPatch:(ListEntityPatch *)listPatch{
++ (instancetype)controllerWithPatch:(JRListEntityPatch *)listPatch{
     return [[self alloc] initWithListPatch:listPatch];
 }
 
@@ -99,20 +99,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DiffableListItemCell"];
     }
     
-    id<Command> cmd = self.listPatch.listCommands[(NSUInteger)indexPath.row];
+    id<JRCommand> cmd = self.listPatch.listCommands[(NSUInteger)indexPath.row];
     
-    if([cmd isKindOfClass:[InsertListCommand class]]){
+    if([cmd isKindOfClass:[JRInsertListCommand class]]){
         cell.textLabel.text = [[cmd value] description];
         cell.backgroundColor = GREEN_COLOR;
         cell.accessoryType = UITableViewCellAccessoryNone;
-    }else if([cmd isKindOfClass:[DeleteListCommand class]]){
+    }else if([cmd isKindOfClass:[JRDeleteListCommand class]]){
         NSMutableAttributedString *fromString = [[NSMutableAttributedString alloc] initWithString:[[cmd value] description]];
         [fromString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0, [fromString length])];
         [cell.textLabel setAttributedText:fromString];
         
         cell.backgroundColor = RED_COLOR;
         cell.accessoryType = UITableViewCellAccessoryNone;
-    }else if([cmd isKindOfClass:[UpdateListCommand class]]){
+    }else if([cmd isKindOfClass:[JRUpdateListCommand class]]){
         NSArray *entities = [self.listPatch.parent valueForKey:self.listPatch.field];
         id val = entities[[cmd index]];
         
@@ -129,14 +129,14 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
-    id<Command> cmd = self.listPatch.listCommands[(NSUInteger)indexPath.row];
-    if([cmd isKindOfClass:[InsertListCommand class]] || [cmd isKindOfClass:[DeleteListCommand class]]){
+    id<JRCommand> cmd = self.listPatch.listCommands[(NSUInteger)indexPath.row];
+    if([cmd isKindOfClass:[JRInsertListCommand class]] || [cmd isKindOfClass:[JRDeleteListCommand class]]){
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         return indexPath;
     }else{
         // Push on a diffable table view controller
         _selectedIndexPath = indexPath;
-        NSArray<id<Patch>> *patches = [cmd value];
+        NSArray<id<JRPatch>> *patches = [cmd value];
         NSArray *entities = [self.listPatch.parent valueForKey:self.listPatch.field];
         id entity  = entities[[cmd index]];
         
@@ -157,7 +157,7 @@
 
 - (void)accept:(UIBarButtonItem *)button{
     _selectedCommands = [NSMutableSet set];
-    id<Command> cmd;
+    id<JRCommand> cmd;
     for(NSIndexPath *i in [self.tableView indexPathsForSelectedRows]){
         cmd = self.listPatch.listCommands[(NSUInteger)i.row];
         [_selectedCommands addObject:cmd];
@@ -197,11 +197,11 @@
     }
 }
 
-- (BOOL)shouldApplyPatch:(id<Patch>)p on:(id<DiffableEntityProtocol>)entity{
+- (BOOL)shouldApplyPatch:(id<JRPatch>)p on:(id<JRDiffableEntityProtocol>)entity{
     return YES;
 }
 
-- (BOOL)shouldApplyListCommand:(id<Command>)c on:(NSArray *)list{
+- (BOOL)shouldApplyListCommand:(id<JRCommand>)c on:(NSArray *)list{
     return [_selectedCommands containsObject:c];
 }
 

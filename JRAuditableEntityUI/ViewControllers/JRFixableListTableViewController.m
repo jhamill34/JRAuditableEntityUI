@@ -22,7 +22,7 @@
     UILabel *_emptyView;
 }
 
-- (instancetype)initWithFix:(FixableListItem *)fix{
+- (instancetype)initWithFix:(JRFixableListItem *)fix{
     if(self = [super init]){
         _listFix = fix;
         _entities = [fix value];
@@ -32,7 +32,7 @@
     
 }
 
-+ (instancetype)controllerWithFix:(FixableListItem *)fix{
++ (instancetype)controllerWithFix:(JRFixableListItem *)fix{
     return [[self alloc] initWithFix:fix];
 }
 
@@ -97,7 +97,7 @@
         cell = [[JRFixableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FixableCollectionViewCell"];
     }
     
-    id<VerifiableEntityProtocol> val = _entities[(NSUInteger)indexPath.row];
+    id<JRVerifiableEntityProtocol> val = _entities[(NSUInteger)indexPath.row];
     
     // Verifiable Entities need a short description to display
     cell.fieldLabel.text = [NSString stringWithFormat:@"%@", [val class]];
@@ -111,8 +111,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // Push FixablesTableViewController on
-    id<VerifiableEntityProtocol> val = _entities[(NSUInteger)indexPath.row];
-    NSArray<id<Fixable>> *childFixes = [val verify];
+    id<JRVerifiableEntityProtocol> val = _entities[(NSUInteger)indexPath.row];
+    NSArray<id<JRFixable>> *childFixes = [val verify];
         
     _selectedIndexPath = indexPath;
         
@@ -127,7 +127,7 @@
         // Ask to verify removal rather than fix
         UIAlertController *confirmRemoval = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Are you sure you want to remove instead of fixing the entity" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action){
-            id<VerifiableEntityProtocol> entity = _entities[(NSUInteger)indexPath.row];
+            id<JRVerifiableEntityProtocol> entity = _entities[(NSUInteger)indexPath.row];
             [self.listFix removeObjectFromParentsCollection:entity];
             [_entities removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

@@ -21,7 +21,7 @@
     UILabel *_emptyView;
 }
 
-- (instancetype)initWithPatches:(NSArray<id<Patch>> *)patches andEntity:(id<DiffableEntityProtocol>)entity{
+- (instancetype)initWithPatches:(NSArray<id<JRPatch>> *)patches andEntity:(id<JRDiffableEntityProtocol>)entity{
     if(self = [super init]){
         _patches = patches;
         _entity = entity;
@@ -30,7 +30,7 @@
     return self;
 }
 
-+ (instancetype)controllerWithPatches:(NSArray<id<Patch>> *)patches andEntity:(id<DiffableEntityProtocol>)entity{
++ (instancetype)controllerWithPatches:(NSArray<id<JRPatch>> *)patches andEntity:(id<JRDiffableEntityProtocol>)entity{
     return [[self alloc] initWithPatches:patches andEntity:entity];
 }
 
@@ -96,20 +96,20 @@
     }
     
     
-    id<Patch> patch = self.patches[(NSUInteger)indexPath.row];
+    id<JRPatch> patch = self.patches[(NSUInteger)indexPath.row];
     
     cell.fieldLabel.text = [patch field];
     
-    if([patch isKindOfClass:[CompositeEntityPatch class]]){
+    if([patch isKindOfClass:[JRCompositeEntityPatch class]]){
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.fromLabel.hidden = YES;
         cell.toLabel.hidden = YES;
-    }else if([patch isKindOfClass:[ListEntityPatch class]]){
+    }else if([patch isKindOfClass:[JRListEntityPatch class]]){
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.fromLabel.hidden = YES;
         cell.toLabel.hidden = YES;
     }else{
-        EntityPatch *p = (EntityPatch *)patch;
+        JREntityPatch *p = (JREntityPatch *)patch;
         NSMutableAttributedString *fromString = [[NSMutableAttributedString alloc] initWithString:[[self.entity valueForKey:[p field]] description]];
         [fromString addAttribute:NSStrikethroughStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0, [fromString length])];
         [cell.fromLabel setAttributedText:fromString];
@@ -120,19 +120,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    id<Patch> patch = self.patches[(NSUInteger)indexPath.row];
+    id<JRPatch> patch = self.patches[(NSUInteger)indexPath.row];
     
-    if([patch isKindOfClass:[CompositeEntityPatch class]]){
+    if([patch isKindOfClass:[JRCompositeEntityPatch class]]){
         _selectedIndexPath = indexPath;
         
-        CompositeEntityPatch *compPatch = (CompositeEntityPatch *)patch;
+        JRCompositeEntityPatch *compPatch = (JRCompositeEntityPatch *)patch;
         id childEntity = [self.entity valueForKey:[compPatch field]];
         
         JRDiffableTableViewController *subDiff = [JRDiffableTableViewController controllerWithPatches:compPatch.patches andEntity:childEntity];
         subDiff.diffableDelegate = self;
         subDiff.title = [NSString stringWithFormat:@"%@ Patch", [childEntity class]];
         [self.navigationController pushViewController:subDiff animated:YES];
-    }else if([patch isKindOfClass:[ListEntityPatch class]]){
+    }else if([patch isKindOfClass:[JRListEntityPatch class]]){
         _selectedIndexPath = indexPath;
         
         JRDiffableListTableViewController *listDiff = [JRDiffableListTableViewController controllerWithPatch:patch];

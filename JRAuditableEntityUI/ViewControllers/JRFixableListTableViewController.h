@@ -10,15 +10,15 @@
 #import <JRAuditableEntity/JRAuditableEntity.h>
 #import "JRFixableTableViewDelegate.h"
 
-@protocol VerifiableEntityProtocol;
+@protocol JRVerifiableEntityProtocol;
 
 @interface JRFixableListTableViewController : UIViewController<JRFixableTableViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (readonly, nonatomic, strong) FixableListItem *listFix;
+@property (readonly, nonatomic, strong) JRFixableListItem *listFix;
 
-- (instancetype)initWithFix:(FixableListItem *)fix;
+- (instancetype)initWithFix:(JRFixableListItem *)fix;
 
-+ (instancetype)controllerWithFix:(FixableListItem *)fix;
++ (instancetype)controllerWithFix:(JRFixableListItem *)fix;
 
 @property (nonatomic, weak) id<JRFixableTableViewDelegate> fixableDelegate;
 

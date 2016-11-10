@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#ifndef DiffableUIConstants_h
-#define DiffableUIConstants_h
+#ifndef JRDiffableUIConstants_h
+#define JRDiffableUIConstants_h
 
 #define RED_COLOR   [UIColor colorWithRed:237.0/255.0 green:99.0/255.0 blue:99.0/255.0 alpha:1.0]
 #define BLUE_COLOR  [UIColor colorWithRed:100.0/255.0 green:159.0/255.0 blue:252.0/255.0 alpha:1.0]
@@ -22,4 +22,4 @@
 extern NSString *const ALPHABET_REGEX;
 extern NSString *const NOT_EMPTY_REGEX;
 
-#endif /* DiffableUIConstants_h */
+#endif /* JRDiffableUIConstants_h */

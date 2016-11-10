@@ -10,7 +10,7 @@
 
 @implementation JRTextBoxFixableAction
 
-- (void)execute:(UIViewController *)context withFixable:(id<Fixable>)fix andSuccess:(FixableSuccess)success andFailure:(FixableFailure)failure{
+- (void)execute:(UIViewController *)context withFixable:(id<JRFixable>)fix andSuccess:(FixableSuccess)success andFailure:(FixableFailure)failure{
     NSString *title = [NSString stringWithFormat:@"New Value for %@", [fix field]];
     NSString *message = [NSString stringWithFormat:@"%@", [fix description]];
     UIAlertController *newValueAlert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
