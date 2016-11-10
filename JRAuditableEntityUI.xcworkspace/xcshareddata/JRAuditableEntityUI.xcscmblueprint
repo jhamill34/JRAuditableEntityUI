@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "76D0A906F000EB9CC353732A0FD139F931F18F44",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "76D0A906F000EB9CC353732A0FD139F931F18F44" : 9223372036854775807,
+    "93C946B185484D542AC9BDF4A8386305FB334F2F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1915BF9-E51F-4938-A6EA-B0EE54C51E17",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "76D0A906F000EB9CC353732A0FD139F931F18F44" : "JRAuditableEntityUI\/",
+    "93C946B185484D542AC9BDF4A8386305FB334F2F" : "JRAuditableEntity\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JRAuditableEntityUI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JRAuditableEntityUI.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xlr8runner\/JRAuditableEntityUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76D0A906F000EB9CC353732A0FD139F931F18F44"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xlr8runner\/JRAuditableEntity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93C946B185484D542AC9BDF4A8386305FB334F2F"
+    }
+  ]
+}
