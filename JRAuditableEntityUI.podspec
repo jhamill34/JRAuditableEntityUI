@@ -1,20 +1,13 @@
 Pod::Spec.new do |s|
-  s.name         = "JRAuditableEntityUI"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of JRAuditableEntityUI."
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
-
-  # s.homepage     = "http://EXAMPLE/JRAuditableEntityUI"
-  s.license      = "MIT (example)"
-  s.author             = { "Joshua L. Rasmussen" => "xlr8runner@gmail.com" }
-  s.source       = { :git => "http://github.com/xlr8runner/JRAuditableEntityUI.git", :tag => "0.0.1" }
+  s.name          = "JRAuditableEntityUI"
+  s.version       = "1.0.0"
+  s.summary       = "Makes use of JRAuditableEntity and provides ViewControllers to display."
+  s.description   = "Provides ViewControllers and Views to property display the data generated from JRAuditableEntity"
+  s.homepage      = "https://github.com/xlr8runner/JRAuditableEntityUI"
+  s.license       = { :type => "MIT", :file => "LICENSE" }
+  s.author        = { "Joshua L. Rasmussen" => "xlr8runner@gmail.com" }
+  s.source        = { :git => "https://github.com/xlr8runner/JRAuditableEntityUI.git", :tag => "1.0.0" }
   s.source_files  = "JRAuditableEntityUI/**/*.{h,m}"
-  # s.dependency "JRAuditableEntity"
+  s.platform      = :ios, '9.0'
+  s.dependency "JRAuditableEntity", "~> 1.0"
 end

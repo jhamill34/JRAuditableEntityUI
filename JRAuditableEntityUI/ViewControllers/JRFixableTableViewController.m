@@ -100,7 +100,7 @@
     
     if([model isKindOfClass:[JRFixableListItem class]]){
         JRFixableListItem *listModel = (JRFixableListItem *)model;
-        cell.currentValueLabel.text = [NSString stringWithFormat:@"%lu invalid", listModel.invalidCount];
+        cell.currentValueLabel.text = [NSString stringWithFormat:@"%@ invalid", @(listModel.invalidCount)];
         cell.descriptionLabel.text = @"";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else if([model isKindOfClass:[JRCompositeFixableEntity class]]){
@@ -176,7 +176,7 @@
         JRFixableTableViewCell *cell = [self.tableView cellForRowAtIndexPath:_selectedIndexPath];
         
         NSUInteger count = listFix.invalidCount;
-        cell.currentValueLabel.text = [NSString stringWithFormat:@"%lu invalid", count];
+        cell.currentValueLabel.text = [NSString stringWithFormat:@"%@ invalid", @(count)];
         shouldRemoveFromList = (count == 0);
     }
     

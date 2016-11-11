@@ -1,14 +1,10 @@
 PODS:
-  - JRAuditableEntity (0.0.1)
+  - JRAuditableEntity (1.0.0)
 
 DEPENDENCIES:
-  - JRAuditableEntity (from `../JRAuditableEntity`)
-
-EXTERNAL SOURCES:
-  JRAuditableEntity:
-    :path: "../JRAuditableEntity"
+  - JRAuditableEntity (~> 1.0)
 
 SPEC CHECKSUMS:
-  JRAuditableEntity: 41ac90c25da18472a893bb14b24e74a3c273b4be
+  JRAuditableEntity: b245131f99a261cda37a054b90c0c17f9f863fc4
 
 COCOAPODS: 0.39.0
